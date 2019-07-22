@@ -1,10 +1,10 @@
 package checkup
 
 import (
-	"io/ioutil"
 	"log"
+	"os"
 )
 
 func init() {
-	log.SetOutput(ioutil.Discard)
+	log.SetOutput(os.Stdout)
 }
