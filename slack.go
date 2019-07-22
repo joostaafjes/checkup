@@ -40,7 +40,8 @@ func (s Slack) Send(result Result) error {
 		Attachments: []slack.Attachment{attach},
 	}
 
-	err := slack.Send(s.Webhook, "", payload)
+	proxy := os.Getenv("http_proxy")
+	err := slack.Send(s.Webhook, proxy, payload)
 	if len(err) > 0 {
 		log.Printf("ERROR: %s", err)
 	}
