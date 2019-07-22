@@ -3,6 +3,7 @@ package checkup
 import (
 	"fmt"
 	"log"
+	"os"
 	"strings"
 
 	slack "github.com/ashwanthkumar/slack-go-webhook"
