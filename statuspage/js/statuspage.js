@@ -166,12 +166,8 @@ function allCheckFilesLoaded(numChecksLoaded, numResultsLoaded) {
 	function renderTime(ns) {
 		var d = new Date(ns * 1e-6);
 		var hours = d.getHours();
-		var ampm = "AM";
-		if (hours > 12) {
-			hours -= 12;
-			ampm = "PM";
-		}
-		return hours+":"+checkup.leftpad(d.getMinutes(), 2, "0")+" "+ampm;
+		
+		return hours+":"+checkup.leftpad(d.getMinutes(), 2, "0");
 	}
 
 	// Render events
