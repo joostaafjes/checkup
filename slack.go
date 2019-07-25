@@ -44,7 +44,7 @@ func (s Slack) Send(result Result) error {
 	proxy := os.Getenv("http_proxy")
 	err := slack.Send(s.Webhook, proxy, payload)
 	if len(err) > 0 {
-		log.Printf("ERROR: %s with payload: %s", err, payload)
+		log.Printf("ERROR: %s", err)
 	} else {
 		log.Printf("Create request for %s", result.Endpoint)
 	}
